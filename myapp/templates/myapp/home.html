@@ -1,0 +1,85 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Bus Company</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('static/mysite/images/buses.jpg');
+            background-size: cover;
+            background-position: center top;
+            margin: 0;
+            padding: 0;
+        }
+        .welcome {
+            text-align: center;
+            padding: 100px 0;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+        .title {
+            font-size: 36px;
+            margin: 20px 0;
+            color: #333;
+        }
+        .description {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            color: #000;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #ffb204;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .bottom-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">
+        <img src="static/mysite/images/bus.png" alt="Bus Company Logo" class="logo">
+        <h1 class="title">Welcome to Bangla Express </h1>
+        <p class="description">We provide safe and comfortable bus transportation services for your convenience. Explore our routes and enjoy a pleasant journey with us.</p>
+        <a href="{% url 'findbus' %}" class="cta-button">Book Bus Now</a>
+    </div>
+    <p class="bottom-text">&copy; 2023 Bangla Express. All rights reserved by The Enthusiast Developer</p>
+</body>
+</html>
+
+
+
+
+
+
+
+{% endblock %}
